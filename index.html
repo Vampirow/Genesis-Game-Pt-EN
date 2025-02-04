@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo da Pizza Genesis</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="game-container">
+        <div class="game-area">
+            <h1 id="game-title">Jogo da Pizza Genesis</h1>
+            <div class="language-selector">
+                <label for="language-select" id="language-label">Idioma:</label>
+                <select id="language-select">
+                    <option value="pt">Português</option>
+                    <option value="en">English</option>
+                </select>
+            </div>
+            <div class="pizza-board">
+                <div class="color-btn green" data-color="green"></div>
+                <div class="color-btn red" data-color="red"></div>
+                <div class="color-btn yellow" data-color="yellow"></div>
+                <div class="color-btn blue" data-color="blue"></div>
+                <div class="pizza-center">
+                    <div class="score"><span id="score-label">Pontuação:</span> <span id="score">0</span></div>
+                </div>
+            </div>
+            <div class="controls">
+                <button id="start-btn">Iniciar</button>
+                <button id="reset-btn">Reiniciar</button>
+            </div>
+        </div>
+        <div class="instructions">
+            <h2 id="instructions-title">Como Jogar</h2>
+            <ol id="instructions-list">
+                <li>Pressione 'Iniciar' para começar o jogo.</li>
+                <li>Observe e memorize a sequência das fatias de pizza acendendo.</li>
+                <li>Repita a sequência clicando nas fatias ou usando o teclado numérico:</li>
+                <ul>
+                    <li>7 - Verde (superior esquerdo)</li>
+                    <li>9 - Vermelho (superior direito)</li>
+                    <li>1 - Amarelo (inferior esquerdo)</li>
+                    <li>3 - Azul (inferior direito)</li>
+                </ul>
+                <li>A sequência ficará mais longa a cada rodada.</li>
+                <li>Se você cometer um erro, o jogo termina.</li>
+                <li>Tente alcançar a maior pontuação!</li>
+            </ol>
+        </div>
+        <div class="ranking">
+            <h2 id="ranking-title">Ranking</h2>
+            <ol id="ranking-list"></ol>
+        </div>
+    </div>
+    <audio id="green-sound" src="https://s3.amazonaws.com/freecodecamp/simonSound1.mp3"></audio>
+    <audio id="red-sound" src="https://s3.amazonaws.com/freecodecamp/simonSound2.mp3"></audio>
+    <audio id="yellow-sound" src="https://s3.amazonaws.com/freecodecamp/simonSound3.mp3"></audio>
+    <audio id="blue-sound" src="https://s3.amazonaws.com/freecodecamp/simonSound4.mp3"></audio>
+    <audio id="error-sound" src="https://s3.amazonaws.com/freecodecamp/simonSound4.mp3"></audio>
+    <script src="script.js"></script>
+</body>
+</html>
+
